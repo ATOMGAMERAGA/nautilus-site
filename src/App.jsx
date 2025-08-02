@@ -33,7 +33,17 @@ const Logo = ({ className = "", size = "normal" }) => {
 
   return (
     <div className={`${sizeClasses[size]} ${className} relative`}>
-      <div className="w-full h-full bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+      <img 
+        src="logo.png" 
+        alt="Nautilus PvP Logo" 
+        className="w-full h-full object-contain rounded-xl shadow-lg"
+        onError={(e) => {
+          // Fallback if logo.png doesn't load
+          e.target.style.display = 'none';
+          e.target.nextSibling.style.display = 'flex';
+        }}
+      />
+      <div className="w-full h-full bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-xl items-center justify-center shadow-lg hidden">
         <div className="text-white font-bold text-lg">N</div>
       </div>
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl blur-md -z-10 animate-pulse"></div>
