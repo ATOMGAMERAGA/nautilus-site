@@ -6,20 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        cyan: {
-          400: '#22d3ee',
-          500: '#06b6d4',
-        },
-        blue: {
-          500: '#3b82f6',
-          600: '#2563eb',
-        }
-      },
       animation: {
         'bounce-slow': 'bounce-slow 3s ease-in-out infinite',
         'spin-slow': 'spin-slow 8s linear infinite',
-        'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
         'bounce-slow': {
@@ -31,11 +20,15 @@ export default {
           'to': { transform: 'rotate(360deg)' },
         }
       },
-      fontFamily: {
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
-      },
-      backdropBlur: {
-        'strong': '20px',
+      colors: {
+        cyan: {
+          400: '#22d3ee',
+          500: '#06b6d4',
+        },
+        blue: {
+          500: '#3b82f6',
+          600: '#2563eb',
+        }
       }
     },
   },
